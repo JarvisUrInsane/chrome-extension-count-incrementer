@@ -1,18 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "Tab Sync",
-    "version": "1.0",
-    "permissions": ["tabs", "storage"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "host_permissions": ["https://tab-sync-worker.ryanzhou147.workers.dev"],
-    "action": {
-      "default_popup": "popup.html"
-    },
-  "icons": {
+  "manifest_version": 3,
+  "name": "Counter Extension",
+  "version": "1.0",
+  "description": "A simple counter extension that syncs with a Flask server.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:5000/"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
+    }
   }
 }

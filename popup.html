@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tab Sync</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Extension</title>
     <script src="popup.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 200px;
+            padding: 20px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <button id="sync">Sync Tabs</button>
-    <button id="load">Load Tabs</button>
-    <button id="view">View Tabs</button>
+    <h2>Counter</h2>
+    <p id="counter-value">Loading...</p>
+    <button id="increment-button">Increment</button>
 </body>
 </html>

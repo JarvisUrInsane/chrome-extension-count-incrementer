@@ -1,3 +1,2 @@
-chrome.runtime.onInstalled.addListener(() => {
-  console.log("Tab Sync Extension Installed");
-});
+// background.js
+console.log('Background script running');

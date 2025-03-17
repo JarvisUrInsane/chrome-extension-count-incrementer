@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Counter: <span id="counter">Loading...</span></h1>
+    <button onclick="incrementCounter()">Increase Counter</button>
+
+    <script>
+        const serverUrl = 'http://127.0.0.1:5000';
+
+        // Function to fetch and update counter display
+        function updateCounter() {
+            fetch(`${serverUrl}/get_count`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("counter").textContent = data.count;
+                });
+        }
+
+        // Function to increment counter
+        function incrementCounter() {
+            fetch(`${serverUrl}/increment`, { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("counter").textContent = data.count;
+                });
+        }
+        setInterval(updateCounter, 2000);
+        // Load counter value when the page loads
+        updateCounter();
+    </script>
+</body>
+</html>

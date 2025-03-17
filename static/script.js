@@ -1,6 +1,6 @@
 const serverUrl = 'http://127.0.0.1:5000';
 
-// Function to get the current counter value
+// Function to fetch and display the counter
 async function getCount() {
     try {
         const response = await fetch(`${serverUrl}/get_count`);
@@ -8,7 +8,6 @@ async function getCount() {
         document.getElementById('counter-value').innerText = `Counter: ${data.count}`;
     } catch (error) {
         console.error("Error fetching counter:", error);
-        document.getElementById('counter-value').innerText = "Error loading count";
     }
 }
 
@@ -23,8 +22,8 @@ async function incrementCount() {
     }
 }
 
-// Event listener for the increment button
+// Event listener for the button
 document.getElementById('increment-button').addEventListener('click', incrementCount);
 
-// Load counter on popup open
+// Load the counter value when the page loads
 getCount();
