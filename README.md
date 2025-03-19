@@ -1,4 +1,4 @@
-# Counter Chrome Extension with Flask Backend  
+# Counter Incrementer Chrome Extension with Flask Backend  
 
 This project is a Chrome extension that connects to a Flask backend with an SQLite database. Pressing a button in the extension increments a counter, and the updated value is displayed on a webpage.
 
